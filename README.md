@@ -9,7 +9,7 @@ This project aims to detect faces in images and predict facial keypoints. It inv
 ## Getting Started
 
 Before running the code, make sure you have the required libraries installed. You can install them using pip:
-'''pip install numpy matplotlib opencv-python torch'''
+' ' 'pip install numpy matplotlib opencv-python torch' ' '
 
 ## Usage
 
