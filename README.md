@@ -1,10 +1,12 @@
-# Facial Key point Detection
+# Facial Keypoint Detection
 
 This project aims to detect faces in images and predict facial keypoints. It involves training a neural network to detect facial keypoints, which can then be applied to any image containing faces. The following steps outline the process:
 
-1. Detect all the faces in an image using a face detector (Haar Cascade detector is used in this project).
-2. Pre-process the detected faces by converting them to grayscale and transforming them into a tensor of the input size required by the neural network.
-3. Use the trained neural network to detect facial keypoints on the image.
+**Detect Faces**: Utilize a Haar Cascade detector to locate faces within images.
+
+**Pre-process Faces**: Convert the detected faces to grayscale and transform them into a suitable input tensor format for the neural network.
+
+**Predict Keypoints**: Apply a trained CNN to predict facial keypoints (such as eyes, nose, mouth corners) on each detected face.
 
 ## Getting Started
 
