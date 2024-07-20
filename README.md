@@ -47,6 +47,8 @@ After training, you can evaluate the model on test data. Test data is loaded, tr
 
 The project also includes a feature visualization section, where you can explore the convolutional kernels of the trained model and see what types of features they detect in an image.
 
+## Troubleshooting
+please keep me posted if you need to reaolve a problem with code. I will keep troubleshootings posted in WiKi pages.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
