@@ -60,3 +60,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Facial keypoint detection is a challenging problem with applications in computer vision and robotics.
 
 Feel free to explore, experiment, and enhance this project for your specific needs. Enjoy experimenting with facial keypoint detection!
+
+## Under Construction
+- Analyse the result of the application and discuss the pros and cons of your model.
+- provide ways to improve the model.
