@@ -33,7 +33,7 @@ The neural network architecture is defined in the `models.py` file. It includes 
 
 ## Data Transformation
 
-Data transformation, including resizing, cropping, normalization, and converting images to tensors, is applied using the `data_transform` defined in `data_load.py`. This transformation prepares the data for training and testing.
+Data transformation, including resizing, cropping, normalization, and converting images to tensors, is applied using the `data_transform` defined in `data_load.py` and also the first notebook **1. Load and Visualize Data.ipynb**. This transformation prepares the data for training and testing.
 
 ## Training
 
