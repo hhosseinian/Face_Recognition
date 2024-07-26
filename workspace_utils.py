@@ -4,12 +4,61 @@ from contextlib import contextmanager
 
 import requests
 
+# Original Lines from Udacity Project
+# DELAY = INTERVAL = 4 * 60  # interval time in seconds
+# MIN_DELAY = MIN_INTERVAL = 2 * 60
+# KEEPALIVE_URL = "https://nebula.udacity.com/api/v1/remote/keep-alive"
+# TOKEN_URL = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/keep_alive_token"
+# TOKEN_HEADERS = {"Metadata-Flavor":"Google"}
 
+############################## Added alternative lines to run directly on google Colab #################
+
+import time
+import requests
+
+# Adjusted values for Google Colab
 DELAY = INTERVAL = 4 * 60  # interval time in seconds
 MIN_DELAY = MIN_INTERVAL = 2 * 60
-KEEPALIVE_URL = "https://nebula.udacity.com/api/v1/remote/keep-alive"
-TOKEN_URL = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/keep_alive_token"
-TOKEN_HEADERS = {"Metadata-Flavor":"Google"}
+
+# Remove or adjust KEEPALIVE_URL if not needed in Colab
+KEEPALIVE_URL = None  # or comment out this line if not applicable
+
+# If you need to use a token for some API, you should provide your own URL and headers
+TOKEN_URL = None  # or your specific token URL if needed
+TOKEN_HEADERS = {}  # or your specific headers if needed
+
+def keep_alive():
+    if KEEPALIVE_URL:
+        try:
+            response = requests.get(KEEPALIVE_URL)
+            if response.status_code == 200:
+                print("Keep-alive successful")
+            else:
+                print("Keep-alive failed with status code:", response.status_code)
+        except requests.RequestException as e:
+            print("An error occurred:", e)
+
+def get_token():
+    if TOKEN_URL:
+        try:
+            response = requests.get(TOKEN_URL, headers=TOKEN_HEADERS)
+            if response.status_code == 200:
+                token = response.json().get('token')
+                print("Token retrieved successfully:", token)
+                return token
+            else:
+                print("Failed to retrieve token with status code:", response.status_code)
+        except requests.RequestException as e:
+            print("An error occurred:", e)
+    return None
+
+while True:
+    keep_alive()
+    token = get_token()
+    time.sleep(INTERVAL)
+
+
+#################################################################
 
 
 def _request_handler(headers):
