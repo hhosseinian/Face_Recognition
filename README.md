@@ -1,11 +1,13 @@
 # Facial Keypoint Detection
 
-This project aims to detect faces in images and predict facial keypoints. It involves training a neural network to detect facial keypoints, which can then be applied to any image containing faces. The following steps outline the process:
+This project aims to detect faces in images and predict facial keypoints. It involves training a neural network to detect facial keypoints, which can then be applied to any image containing faces. 
 
 <a target="_blank" href="https://colab.research.google.com/github/hhosseinian/Face_Recognition">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
+
+The following steps outline the process:
 **Detect Faces**: Utilize a Haar Cascade detector to locate faces within images.
 
 **Pre-process Faces**: Convert the detected faces to grayscale and transform them into a suitable input tensor format for the neural network.
