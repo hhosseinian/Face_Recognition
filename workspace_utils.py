@@ -16,7 +16,7 @@ import requests
 import time
 
 # Adjusted values for Google Colab
-DELAY = INTERVAL = 4 * 60  # interval time in seconds
+DELAY = INTERVAL = 400 * 60  # interval time in seconds
 MIN_DELAY = MIN_INTERVAL = 2 * 60
 
 # Remove or adjust KEEPALIVE_URL if not needed in Colab
