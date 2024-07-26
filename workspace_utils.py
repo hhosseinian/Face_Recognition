@@ -14,7 +14,6 @@ import requests
 ############################## Added alternative lines to run directly on google Colab #################
 
 import time
-import requests
 
 # Adjusted values for Google Colab
 DELAY = INTERVAL = 4 * 60  # interval time in seconds
