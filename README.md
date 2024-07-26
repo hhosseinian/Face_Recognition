@@ -8,6 +8,7 @@ This project aims to detect faces in images and predict facial keypoints. It inv
 
 
 The following steps outline the process:
+
 **Detect Faces**: Utilize a Haar Cascade detector to locate faces within images.
 
 **Pre-process Faces**: Convert the detected faces to grayscale and transform them into a suitable input tensor format for the neural network.
