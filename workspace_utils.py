@@ -14,17 +14,14 @@ import requests
 ############################## Added alternative lines to run directly on google Colab #################
 
 import time
-
 # Adjusted values for Google Colab
-DELAY = INTERVAL = 400 * 60  # interval time in seconds
-MIN_DELAY = MIN_INTERVAL = 2 * 60
+DELAY = INTERVAL = 400 * 60  # 400 minutes interval time in seconds
+MIN_DELAY = MIN_INTERVAL = 2 * 60  # 2 minutes
 
-# Remove or adjust KEEPALIVE_URL if not needed in Colab
-KEEPALIVE_URL = None  # or comment out this line if not applicable
-
-# If you need to use a token for some API, you should provide your own URL and headers
-TOKEN_URL = None  # or your specific token URL if needed
-TOKEN_HEADERS = {}  # or your specific headers if needed
+# Remove or adjust URLs if not needed in Colab
+KEEPALIVE_URL = None  # Not used in Colab
+TOKEN_URL = None  # Not used in Colab
+TOKEN_HEADERS = {}  # Not used in Colab
 
 def keep_alive():
     if KEEPALIVE_URL:
