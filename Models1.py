@@ -64,8 +64,10 @@ class Net(nn.Module):
         x = F.relu(self.bn3(self.pool3(self.conv3(x))))
         #x = F.relu(self.bn4(self.pool4(self.conv4(x))))
         x = F.relu(self.bn4(self.pool4(self.conv4(x))))
+        print(f"Shape after conv layers: {x.shape}")
         
         x = x.view(x.size(0), -1)
+        print(f"Shape after flattening: {x.shape}")
         x = F.relu(self.fc_norm1(self.fc1(x)))
         x = F.relu(self.fc_norm2(self.fc2(x)))
         x = self.fc3(x)
