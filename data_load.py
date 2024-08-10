@@ -1,7 +1,8 @@
 import glob
 import os
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, DataLoader, Subset
+from sklearn.model_selection import KFold
 import numpy as np
 import matplotlib.image as mpimg
 import pandas as pd
@@ -159,3 +160,19 @@ class ToTensor(object):
         
         return {'image': torch.from_numpy(image),
                 'keypoints': torch.from_numpy(key_pts)}
+
+
+def get_dataloaders(csv_file, root_dir, transform=None, num_splits=5, batch_size=32):
+    dataset = FacialKeypointsDataset(csv_file=csv_file, root_dir=root_dir, transform=transform)
+    kf = KFold(n_splits=num_splits, shuffle=True, random_state=42)
+    
+    dataloaders = []
+    
+    for train_idx, val_idx in kf.split(np.arange(len(dataset))):
+        train_subset = Subset(dataset, train_idx)
+        val_subset = Subset(dataset, val_idx)
+        train_loader = DataLoader(train_subset, batch_size=batch_size, shuffle=True)
+        val_loader = DataLoader(val_subset, batch_size=batch_size, shuffle=False)
+        dataloaders.append((train_loader, val_loader))
+    
+    return dataloaders
