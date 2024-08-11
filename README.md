@@ -4,7 +4,19 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-This project aims to detect faces in images and predict facial keypoints. It involves training a neural network to detect facial keypoints, which can then be applied to any image containing faces. 
+This project aims to detect faces in images and predict facial keypoints. It involves training a neural network to detect facial keypoints, and using computer vision techniques to transform images of faces. 
+
+### Examples of Facial Keypoints
+
+Let’s explore some examples of images with corresponding facial keypoints.
+
+![Facial Keypoints Example](images/key_pts_example.png)
+
+In the image above, **facial keypoints** (or facial landmarks) are depicted as small magenta dots on each face. Each face in the dataset has **68 keypoints**, each with coordinates (x, y). These keypoints highlight significant areas of the face, including the eyes, corners of the mouth, and the nose.
+
+These keypoints are essential for various applications, such as face filters, emotion recognition, and pose estimation. The numbered keypoints in the image below illustrate how specific ranges of points correspond to different facial features.
+
+![Numbered Facial Landmarks](images/landmarks_numbered.jpg)
 
 
 The following steps outline the process:
