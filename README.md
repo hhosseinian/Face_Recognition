@@ -34,6 +34,10 @@ Before running the code, make sure you have the required libraries installed. Yo
 pip install numpy matplotlib opencv-python torch
 ```
 
+- The Jupyter notebook **1. Load and Visualize Data.ipynb** outlines the process of loading and visualizing facial keypoint data from a dataset, using PyTorch's Dataset class to manage the data, applying various transformations such as normalization, rescaling, and cropping, and preparing the data for training a convolutional neural network (CNN) for facial keypoint detection.
+
+
+
 ## Usage
 
 1. Select an image from the `images/` directory on which you want to perform facial keypoint detection.
