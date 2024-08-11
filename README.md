@@ -35,6 +35,7 @@ pip install numpy matplotlib opencv-python torch
 ```
 
 - The Jupyter notebook **1. Load and Visualize Data.ipynb** outlines the process of loading and visualizing facial keypoint data from a dataset, using PyTorch's Dataset class to manage the data, applying various transformations such as normalization, rescaling, and cropping, and preparing the data for training a convolutional neural network (CNN) for facial keypoint detection.
+-The Jupyter notebook **2. Network Architecture.ipynb** develops a Convolutional Neural Network (CNN) using PyTorch to predict facial keypoints from image data. The CNN architecture was defined with convolutional, max-pooling, and fully-connected layers, including dropout layers to mitigate overfitting. Image data was preprocessed with transformations such as rescaling, cropping, normalizing, and converting to tensors, ensuring consistency and efficiency during model training. The CNN was trained and validated on a labeled dataset, with hyperparameters adjusted to optimize performance. Model performance was visualized by comparing predicted keypoints with ground truth keypoints on test data, enabling iterative improvements to the network structure.
 
 
 
