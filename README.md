@@ -33,14 +33,14 @@ Before running the code, make sure you have the required libraries installed. Yo
 ```
 pip install numpy matplotlib opencv-python torch
 ```
-
+## Project Structure
 - The Jupyter notebook **1. Load and Visualize Data.ipynb** outlines the process of loading and visualizing facial keypoint data from a dataset, using PyTorch's Dataset class to manage the data, applying various transformations such as normalization, rescaling, and cropping, and preparing the data for training a convolutional neural network (CNN) for facial keypoint detection.
 - The Jupyter notebook **2. Define the Network Architecture.ipynb** develops a Convolutional Neural Network (CNN) using PyTorch to predict facial keypoints from image data. The CNN architecture was defined with convolutional, max-pooling, and fully-connected layers, including dropout layers to mitigate overfitting. Image data was preprocessed with transformations such as rescaling, cropping, normalizing, and converting to tensors, ensuring consistency and efficiency during model training. The CNN was trained and validated on a labeled dataset, with hyperparameters adjusted to optimize performance. Model performance was visualized by comparing predicted keypoints with ground truth keypoints on test data, enabling iterative improvements to the network structure.
 - The Jupyter notebook **3. Facial Keypoint Detection, Complete Pipeline.ipynb** outlines a comprehensive process for detecting facial keypoints using a trained Convolutional Neural Network (CNN). It involves using a Haar Cascade face detector to locate faces in images, preprocessing those detected faces by converting them to grayscale, normalizing, rescaling, and transforming them into tensors compatible with the CNN input. The notebook then applies the trained CNN model to predict facial keypoints, which are visually compared with the original image for validation and further improvement of the model.
 
 
 
-## Usage
+## Usage (Under construction)
 
 1. Select an image from the `images/` directory on which you want to perform facial keypoint detection.
 
@@ -52,23 +52,23 @@ pip install numpy matplotlib opencv-python torch
    - Transform each detected face into an input tensor for the model.
    - Use the model to detect and display predicted keypoints on each detected face.
 
-## Model Architecture
+## Model Architecture (Under construction)
 
 The neural network architecture is defined in the `models.py` file. It includes convolutional layers, max-pooling layers, and fully-connected layers. You can modify the architecture in `models.py` to experiment with different network structures.
 
-## Data Transformation
+## Data Transformation (Under construction)
 
 Data transformation, including resizing, cropping, normalization, and converting images to tensors, is applied using the `data_transform` defined in `data_load.py` and also the first notebook **1. Load and Visualize Data.ipynb**. This transformation prepares the data for training and testing.
 
-## Training
+## Training (Under construction)
 
 The training process is handled in the provided Jupyter Notebook or Python script. You can adjust the number of epochs, batch size, loss function, and optimizer to train the model. The default settings are provided as a starting point.
 
-## Testing
+## Testing (Under construction)
 
 After training, you can evaluate the model on test data. Test data is loaded, transformed, and processed similarly to the training data. The model's performance can be visualized by comparing predicted keypoints with ground truth keypoints on test images.
 
-## Feature Visualization
+## Feature Visualization (Under construction)
 
 The project also includes a feature visualization section, where you can explore the convolutional kernels of the trained model and see what types of features they detect in an image.
 
