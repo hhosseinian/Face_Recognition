@@ -42,15 +42,13 @@ pip install numpy matplotlib opencv-python torch
 
 ## Usage (Under construction)
 
-1. Select an image from the `images/` directory on which you want to perform facial keypoint detection.
+### Training
+To train the network, follow these steps:
 
-2. Run the Jupyter Notebook or Python script provided to perform the following tasks:
-
-   - Load necessary libraries and select an image.
-   - Detect all faces in the image using a Haar Cascade classifier.
-   - Load a trained facial keypoint detection model.
-   - Transform each detected face into an input tensor for the model.
-   - Use the model to detect and display predicted keypoints on each detected face.
+1. Define your model architecture in a separate file name as **models#.py**.
+2. Open the Define the Network Architecture.ipynb on google colab and import 'Net()' the **models#.py** (your defined model) in the training part. Follow the instructions in the Jupyter notebook to train and save the model.
+### Testing
+  Use **Facial Keypoint Detection, Complete Pipeline.ipynb** to evaluate the performance of trained model.
 
 ## Model Architecture (Under construction)
 
